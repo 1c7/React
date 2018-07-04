@@ -3,9 +3,18 @@
 console.log('App.js running!');
 
 var template = React.createElement(
-  'h1',
+  'div',
   null,
-  'Hello Universe'
+  React.createElement(
+    'h1',
+    null,
+    'Hello Universe'
+  ),
+  React.createElement(
+    'p',
+    null,
+    'sceond line'
+  )
 );
 var appRoot = document.getElementById('app');
 
