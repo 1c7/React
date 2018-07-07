@@ -1,59 +1,55 @@
 'use strict';
 
-console.log('App.js running!');
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-var list = [1, 2, 3];
-var count = 0;
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-var add = function add() {
-  console.log('mionusOne');
-};
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-var plusOne = function plusOne() {
-  console.log('plusOne');
-};
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var newValue = function newValue() {};
+console.log('Our first component');
 
-function formSubmit(e) {
-  e.preventDefault();
-  var input_element = e.target.elements.in;
-  var value = input_element.value;
-  list.push(value);
-  render();
-  input_element.value = '';
-}
+// class IndecisionApp extends React.Component{
+//   render(){
 
-var appRoot = document.getElementById('app');
+//   }
+// }
 
-function render() {
-  var template = React.createElement(
-    'div',
-    null,
-    React.createElement(
-      'h1',
-      null,
-      'toggle display'
-    ),
-    list.map(function (l) {
+var Header = function (_React$Component) {
+  _inherits(Header, _React$Component);
+
+  function Header() {
+    _classCallCheck(this, Header);
+
+    return _possibleConstructorReturn(this, (Header.__proto__ || Object.getPrototypeOf(Header)).apply(this, arguments));
+  }
+
+  _createClass(Header, [{
+    key: 'render',
+    value: function render() {
       return React.createElement(
         'p',
-        { key: l },
-        l
+        null,
+        'Header'
       );
-    }),
-    React.createElement(
-      'form',
-      { onSubmit: formSubmit },
-      React.createElement('input', { type: 'text', onClick: newValue, name: 'in' }),
-      React.createElement(
-        'button',
-        { type: 'submit' },
-        'submit'
-      )
-    )
-  );
-  ReactDOM.render(template, appRoot);
-}
+    }
+  }]);
 
-render();
+  return Header;
+}(React.Component);
+
+var jsx = React.createElement(
+  'div',
+  null,
+  React.createElement(
+    'h1',
+    null,
+    'asdasd'
+  ),
+  React.createElement(Header, null),
+  React.createElement(Header, null),
+  React.createElement(Header, null)
+);
+
+ReactDOM.render(jsx, document.getElementById('app'));
