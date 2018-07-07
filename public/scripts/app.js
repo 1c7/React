@@ -19,12 +19,20 @@ var Counter = function (_React$Component) {
     _this.handlePlus = _this.handlePlus.bind(_this);
     _this.handleMinus = _this.handleMinus.bind(_this);
     _this.handleReset = _this.handleReset.bind(_this);
+    _this.state = {
+      count: 100
+    };
     return _this;
   }
 
   _createClass(Counter, [{
     key: 'handlePlus',
     value: function handlePlus() {
+      this.setState(function (prevState) {
+        return {
+          count: prevState.count + 1
+        };
+      });
       console.log('plus');
     }
   }, {
@@ -46,7 +54,8 @@ var Counter = function (_React$Component) {
         React.createElement(
           'h1',
           null,
-          'Counter: '
+          'Counter: ',
+          this.state.count
         ),
         React.createElement(
           'button',

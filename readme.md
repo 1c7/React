@@ -87,3 +87,11 @@ live-server public/
 * Props
 * .bind(this)
 * State
+  1. setState
+  ```javascript
+    this.setState((prevState)=>{
+      return {
+        count: prevState.count + 1
+      }
+    })
+  ```
