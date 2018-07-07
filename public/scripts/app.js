@@ -19,7 +19,6 @@ function formSubmit(e) {
   e.preventDefault();
   var input_element = e.target.elements.in;
   var value = input_element.value;
-  // alert(value);
   list.push(value);
   render();
   input_element.value = '';
@@ -34,7 +33,7 @@ function render() {
     React.createElement(
       'h1',
       null,
-      name
+      'toggle display'
     ),
     list.map(function (l) {
       return React.createElement(

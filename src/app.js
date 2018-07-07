@@ -22,7 +22,6 @@ function formSubmit(e){
   e.preventDefault();
   var input_element = e.target.elements.in;
   var value = input_element.value;
-  // alert(value);
   list.push(value);
   render();
   input_element.value = '';
@@ -35,7 +34,7 @@ var appRoot = document.getElementById('app');
 function render(){
   var template = (
     <div>
-      <h1>{name}</h1>
+      <h1>toggle display</h1>
       {/* <p>Count: {count}</p> */}
       {
         list.map((l)=>{
@@ -46,7 +45,6 @@ function render(){
         <input type='text' onClick={newValue} name='in'/>
         <button type='submit'>submit</button>
       </form>
-      
       {/* <button onClick={add}>Add!</button> */}
       {/* <button onClick={plusOne}>Plus</button> */}
     </div>
