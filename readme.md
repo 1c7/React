@@ -1,6 +1,16 @@
 ## React.js 学习笔记
 这里只是我个人的学习笔记，对你没用。     
-笔记时间：2018-7-5
+笔记时间：2018-7-5, 2018-7-7
+
+## 运行
+在 `indecision-app/` 目录下运行
+```
+# 实时刷新
+babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
+
+# 运行服务器
+live-server public/
+```
 
 ## 课程名
 react-2nd-edition
