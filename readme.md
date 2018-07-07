@@ -18,6 +18,7 @@ live-server public/
   babel src/playground/toggleVisible.js --out-file=public/scripts/app.js --presets=env,react --watch
   babel src/playground/es6-class-1.js --out-file=public/scripts/app.js --presets=env,react --watch
   babel src/playground/component1.js --out-file=public/scripts/app.js --presets=env,react --watch
+  babel src/playground/bind.js --out-file=public/scripts/app.js --presets=env,react --watch
 ```
 
 ## 课程名
