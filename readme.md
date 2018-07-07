@@ -95,3 +95,11 @@ live-server public/
       }
     })
   ```
+  2. 034 Alternative setState Syntax.mp4     
+  setState 传对象和传函数进去，是不一样的。传对象是异步的。
+  用函数才能得到预期结果
+  比如用2个 setState，第一个设置成0，第二个+1，函数的结果就是对的。
+
+
+
+  
