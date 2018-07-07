@@ -19,6 +19,7 @@ live-server public/
   babel src/playground/es6-class-1.js --out-file=public/scripts/app.js --presets=env,react --watch
   babel src/playground/component1.js --out-file=public/scripts/app.js --presets=env,react --watch
   babel src/playground/bind.js --out-file=public/scripts/app.js --presets=env,react --watch
+  babel src/playground/5.\ counter.js --out-file=public/scripts/app.js --presets=env,react --watch
 ```
 
 ## 课程名
@@ -78,3 +79,11 @@ live-server public/
   babel src/app.js --out-file=public/scripts/app.js --presets=env,react
   babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch
 ```
+
+
+## 大纲
+* 基本引入
+* Component
+* Props
+* .bind(this)
+* State
