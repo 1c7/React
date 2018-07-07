@@ -20,6 +20,7 @@ live-server public/
   babel src/playground/component1.js --out-file=public/scripts/app.js --presets=env,react --watch
   babel src/playground/bind.js --out-file=public/scripts/app.js --presets=env,react --watch
   babel src/playground/5.\ counter.js --out-file=public/scripts/app.js --presets=env,react --watch
+  babel src/playground/6.\ visible.js --out-file=public/scripts/app.js --presets=env,react --watch
 ```
 
 ## 课程名
@@ -101,5 +102,3 @@ live-server public/
   比如用2个 setState，第一个设置成0，第二个+1，函数的结果就是对的。
 
 
-
-  

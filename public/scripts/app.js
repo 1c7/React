@@ -8,49 +8,28 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var Counter = function (_React$Component) {
-  _inherits(Counter, _React$Component);
+var Visible = function (_React$Component) {
+  _inherits(Visible, _React$Component);
 
-  function Counter(props) {
-    _classCallCheck(this, Counter);
+  function Visible(props) {
+    _classCallCheck(this, Visible);
 
-    var _this = _possibleConstructorReturn(this, (Counter.__proto__ || Object.getPrototypeOf(Counter)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Visible.__proto__ || Object.getPrototypeOf(Visible)).call(this, props));
 
-    _this.handlePlus = _this.handlePlus.bind(_this);
-    _this.handleMinus = _this.handleMinus.bind(_this);
-    _this.handleReset = _this.handleReset.bind(_this);
+    _this.toggleVisible = _this.toggleVisible.bind(_this);
     _this.state = {
-      count: 100
+      visible: true
     };
     return _this;
   }
 
-  _createClass(Counter, [{
-    key: 'handlePlus',
-    value: function handlePlus() {
+  _createClass(Visible, [{
+    key: 'toggleVisible',
+    value: function toggleVisible() {
+      console.log('run toggle');
       this.setState(function (prevState) {
         return {
-          count: prevState.count + 1
-        };
-      });
-      console.log('plus');
-    }
-  }, {
-    key: 'handleMinus',
-    value: function handleMinus() {
-      console.log('m');
-    }
-  }, {
-    key: 'handleReset',
-    value: function handleReset() {
-      this.setState(function () {
-        return {
-          count: 0
-        };
-      });
-      this.setState(function (prevState) {
-        return {
-          count: prevState.count + 1
+          visible: !prevState.visible
         };
       });
     }
@@ -61,31 +40,20 @@ var Counter = function (_React$Component) {
         'div',
         null,
         React.createElement(
+          'button',
+          { onClick: this.toggleVisible },
+          this.state.visible ? '隐藏' : '显示'
+        ),
+        this.state.visible && React.createElement(
           'h1',
           null,
-          'Counter: ',
-          this.state.count
-        ),
-        React.createElement(
-          'button',
-          { onClick: this.handlePlus },
-          '+1'
-        ),
-        React.createElement(
-          'button',
-          { onClick: this.handleMinus },
-          '-1'
-        ),
-        React.createElement(
-          'button',
-          { onClick: this.handleReset },
-          'reset'
+          'I WOULD DISAPPER AND SHOW'
         )
       );
     }
   }]);
 
-  return Counter;
+  return Visible;
 }(React.Component);
 
-ReactDOM.render(React.createElement(Counter, null), document.getElementById('app'));
+ReactDOM.render(React.createElement(Visible, null), document.getElementById('app'));
