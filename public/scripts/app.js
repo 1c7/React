@@ -10,12 +10,6 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 console.log('Our first component');
 
-// class IndecisionApp extends React.Component{
-//   render(){
-
-//   }
-// }
-
 var Header = function (_React$Component) {
   _inherits(Header, _React$Component);
 
@@ -29,9 +23,18 @@ var Header = function (_React$Component) {
     key: 'render',
     value: function render() {
       return React.createElement(
-        'p',
+        'div',
         null,
-        'Header'
+        React.createElement(
+          'h2',
+          null,
+          'Header'
+        ),
+        React.createElement(
+          'p',
+          null,
+          this.props.options.length
+        )
       );
     }
   }]);
@@ -39,17 +42,33 @@ var Header = function (_React$Component) {
   return Header;
 }(React.Component);
 
-var jsx = React.createElement(
-  'div',
-  null,
-  React.createElement(
-    'h1',
-    null,
-    'asdasd'
-  ),
-  React.createElement(Header, null),
-  React.createElement(Header, null),
-  React.createElement(Header, null)
-);
+var IndecisionApp = function (_React$Component2) {
+  _inherits(IndecisionApp, _React$Component2);
 
-ReactDOM.render(jsx, document.getElementById('app'));
+  function IndecisionApp() {
+    _classCallCheck(this, IndecisionApp);
+
+    return _possibleConstructorReturn(this, (IndecisionApp.__proto__ || Object.getPrototypeOf(IndecisionApp)).apply(this, arguments));
+  }
+
+  _createClass(IndecisionApp, [{
+    key: 'render',
+    value: function render() {
+      var options = ['a', 'b', 'c', 'd'];
+      return React.createElement(
+        'div',
+        null,
+        React.createElement(
+          'h1',
+          null,
+          'App'
+        ),
+        React.createElement(Header, { options: options })
+      );
+    }
+  }]);
+
+  return IndecisionApp;
+}(React.Component);
+
+ReactDOM.render(React.createElement(IndecisionApp, null), document.getElementById('app'));

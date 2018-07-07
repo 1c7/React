@@ -13,7 +13,7 @@ live-server public/
 ```
 
 ## 如果要跑不同的文件
-把不同的文件作为输入就行。输出照样是 app.js    
+把不同的文件作为输入就行。输出文件还是 app.js    
 ```
   babel src/playground/toggleVisible.js --out-file=public/scripts/app.js --presets=env,react --watch
   babel src/playground/es6-class-1.js --out-file=public/scripts/app.js --presets=env,react --watch
