@@ -21,6 +21,9 @@ live-server public/
   babel src/playground/bind.js --out-file=public/scripts/app.js --presets=env,react --watch
   babel src/playground/5.\ counter.js --out-file=public/scripts/app.js --presets=env,react --watch
   babel src/playground/6.\ visible.js --out-file=public/scripts/app.js --presets=env,react --watch
+  babel src/playground/7.stateless.js --out-file=public/scripts/app.js --presets=env,react --watch
+  babel src/playground/8.defaultProps.js --out-file=public/scripts/app.js --presets=env,react --watch
+  babel src/playground/9.lifecycle.js --out-file=public/scripts/app.js --presets=env,react --watch
 ```
 
 ## 课程名
@@ -83,10 +86,15 @@ live-server public/
 
 
 ## 大纲
+```
 * 基本引入
+
 * Component
+
 * Props
+
 * .bind(this)
+
 * State
   1. setState
   ```javascript
@@ -101,4 +109,25 @@ live-server public/
   用函数才能得到预期结果
   比如用2个 setState，第一个设置成0，第二个+1，函数的结果就是对的。
 
+* Stateless 组件
+  stateless functional component
+  可以 props
+  没有 this
+  没有生命周期
+  好处：更快
+  适用于：纯展示型组件
 
+7. props 默认值
+  `defaultProps`
+
+8. 简写 setState
+  this.setState(()=>({ a: 3 }))
+  用括号把 {} 包起来，这样就会返回对象   
+
+9. 生命周期
+
+10. Webpack
+`webpack.config.js`
+
+11. 
+```
